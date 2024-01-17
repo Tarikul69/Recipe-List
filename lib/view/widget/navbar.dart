@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:recipe_list_app/view/home/home.dart';
+import 'package:recipe_list_app/view/home/home1.dart';
+import 'package:recipe_list_app/view/home/home2.dart';
+import 'package:recipe_list_app/view/home/home3.dart';
 
 class navbar extends StatelessWidget {
   const navbar({Key? key}) : super(key: key);
@@ -12,9 +15,9 @@ class navbar extends StatelessWidget {
         body: TabBarView(
           children: [
             home(),
-            home(),
-            home(),
-            home(),
+            home1(),
+            home2(),
+            home3(),
 
              
           ],

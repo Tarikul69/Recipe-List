@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_list_app/view/home/home.dart';
 import 'package:recipe_list_app/view/widget/navbar.dart';
 
 // ignore: camel_case_types

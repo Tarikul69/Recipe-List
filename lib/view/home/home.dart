@@ -13,7 +13,7 @@ class home extends StatelessWidget {
         title: Text("List"),
       ),
       body: Container(),
-      bottomNavigationBar: const navbar(),
+      bottomNavigationBar: navbar(),
     );
   }
 }
