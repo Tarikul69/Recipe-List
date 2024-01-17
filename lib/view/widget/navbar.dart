@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:recipe_list_app/view/home/home.dart';
-import 'package:recipe_list_app/view/home/home1.dart';
-import 'package:recipe_list_app/view/home/home2.dart';
-import 'package:recipe_list_app/view/home/home3.dart';
+import 'package:recipe_list_app/view/home/search.dart';
+import 'package:recipe_list_app/view/home/bookmark.dart';
+import 'package:recipe_list_app/view/home/profile.dart';
 
 class navbar extends StatelessWidget {
   const navbar({Key? key}) : super(key: key);
@@ -16,8 +16,8 @@ class navbar extends StatelessWidget {
           children: [
             home(),
             search(),
-            home2(),
-            home3(),
+            bookmark(),
+            profile(),
 
              
           ],
