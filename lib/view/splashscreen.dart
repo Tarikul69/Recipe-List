@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_list_app/view/home/home.dart';
+import 'package:recipe_list_app/view/widget/navbar.dart';
 
 // ignore: camel_case_types
 class splashscreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _splashscreenState extends State<splashscreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => home(),
+        builder: (context) => navbar(),
       ),
     );
   }
@@ -37,7 +38,9 @@ class _splashscreenState extends State<splashscreen> {
           child: const Text(
             'Recipe List',
             style: TextStyle(
-                fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 24, 
+                fontWeight: FontWeight.bold, 
+                color: Colors.white),
           ),
         ),
       ),

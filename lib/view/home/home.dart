@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:recipe_list_app/view/widget/navbar.dart';
 
 class home extends StatelessWidget {
   const home({Key? key}) : super(key: key);
@@ -10,6 +12,8 @@ class home extends StatelessWidget {
         centerTitle: true,
         title: Text("List"),
       ),
+      body: Container(),
+      bottomNavigationBar: const navbar(),
     );
   }
 }
