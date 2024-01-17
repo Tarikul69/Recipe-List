@@ -19,4 +19,9 @@ return mymodel(
 static List<mymodel> recipiesfromSnapshot(List snapshot){
   return snapshot.map((data){return mymodel.fromJson(data);}).toList();
 }
+
+@ override
+String toString(){
+  return 'network {name: $name, image: $image, rating: $rating, totaltime: $totaltime,}';
+}
 }
