@@ -12,8 +12,7 @@ class home extends StatelessWidget {
         centerTitle: true,
         title: Text("List"),
       ),
-      body: Container(),
-      bottomNavigationBar: navbar(),
+      
     );
   }
 }

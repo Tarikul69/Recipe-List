@@ -15,7 +15,7 @@ class navbar extends StatelessWidget {
         body: TabBarView(
           children: [
             home(),
-            home1(),
+            search(),
             home2(),
             home3(),
 
@@ -34,26 +34,22 @@ class navbar extends StatelessWidget {
             labelColor: Colors.deepPurple,
             tabs: [
               Tab(
-                text: "Home",
-                icon: FaIcon(
+                 icon: FaIcon(
                   FontAwesomeIcons.house,
                 ),
               ),
               Tab(
-                text: "Category",
-                icon: FaIcon(
+                 icon: FaIcon(
+                  FontAwesomeIcons.searchengin,
+                ),
+              ),
+              Tab(
+                 icon: FaIcon(
                   FontAwesomeIcons.list,
                 ),
               ),
               Tab(
-                text: "Cart",
-                icon: FaIcon(
-                  FontAwesomeIcons.cartPlus,
-                ),
-              ),
-              Tab(
-                text: "Profile",
-                icon: FaIcon(
+                 icon: FaIcon(
                   FontAwesomeIcons.person,
                 ),
               ),
