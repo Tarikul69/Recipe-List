@@ -10,9 +10,9 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
-
-  List<Mymodel>? mymodel;
   var isLoaded = false;
+  List<Mymodel>? mymodel;
+
   @override
   void initState() {
      super.initState();
@@ -28,13 +28,11 @@ class _homeState extends State<home> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text("List"),
+        centerTitle: true,title: Text("List"),
       ),
     body: ListView.builder(
      itemCount: mymodel?.length,
