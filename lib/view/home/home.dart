@@ -1,34 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:recipe_list_app/components/network/network.dart';
 import 'package:recipe_list_app/model/mymodel.dart';
-import 'package:recipe_list_app/view/widget/navbar.dart';
 
 class home extends StatefulWidget {
-  const home({Key? key}) : super(key: key);
+  const home({super.key});
+
   @override
   State<home> createState() => _homeState();
 }
 
 class _homeState extends State<home> {
 
-late List<mymodel> _mymodel1;
-bool _isLoading = true;
-
-@override
-void initState() {
-    // TODO: implement initState
-    super.initState();
-    getNetwork();
+  List<Mymodel>? mymodel;
+  var isLoaded = false;
+  @override
+  void initState() {
+     super.initState();
+     getData();
   }
 
-Future<void> getNetwork() async{
-  _mymodel1 = (await network.getNetwork()).cast<mymodel>();
-  setState(() {
-    _isLoading = false;
-  });
-  print(_mymodel1);
-}
+  getData() async{
+    mymodel = await network().getPost();
+    if (mymodel != null) {
+      setState(() {
+        isLoaded = true;
+      });
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +36,13 @@ Future<void> getNetwork() async{
         centerTitle: true,
         title: Text("List"),
       ),
-      body: Container(),
+    body: ListView.builder(
+     itemCount: mymodel?.length,
+     itemBuilder: ((context, index){
+      return SizedBox(
+        child: Text("Hi.."),
+      );
+    }),),
     );
   }
 }
